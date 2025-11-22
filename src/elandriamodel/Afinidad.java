@@ -1,12 +1,15 @@
 package elandriamodel;
 
-public class Afinidad {
 
-	public static final String FUEGO = null;
+public enum Afinidad {
+    AGUA, FUEGO, AIRE, TIERRA;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
-
+    public boolean esOpuesta(Afinidad otra) {
+        if (this == AGUA && otra == FUEGO) return true;
+        if (this == FUEGO && otra == AGUA) return true;
+        if (this == AIRE && otra == TIERRA) return true;
+        if (this == TIERRA && otra == AIRE) return true;
+        return false;
+    }
 }
