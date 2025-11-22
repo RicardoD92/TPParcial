@@ -1,10 +1,7 @@
 package excepciones;
 
-public class EnergyOverflowException {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+public class EnergyOverflowException extends RuntimeException {
+    public EnergyOverflowException(String msg) {
+        super(msg);
+    }
 }
