@@ -66,11 +66,14 @@ public class MaestrosElemental {
     }
 
     // utilidad para reportes: cantidad de transformadas (instancias de transformaciones.CriaturaDecorator)
+    
     public int cantidadTransformadas() {
         int count = 0;
         for (Criatura c : criaturas.values()) {
             if (c instanceof transformaciones.CriaturaDecorator) count++;
         }
-        return count;
-    }
+        return count;
+    }
+
+
 }
