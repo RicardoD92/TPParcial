@@ -1,10 +1,30 @@
 package transformaciones;
 
-public class LlamaInterna {
+import elandriamodel.Afinidad;
+import elandriamodel.Criatura;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class LlamaInterna extends CriaturaDecorator {
 
-	}
+    public LlamaInterna(Criatura wrappee) {
+        super(wrappee);
 
+        if (wrappee.getAfinidad() == Afinidad.FUEGO) {
+            wrappee.sumarEnergia(30);
+        } else {
+            wrappee.setInestable(true);
+        }
+    }
+
+
+    @Override
+    public void entrenar() {
+        wrappee.entrenar();  
+    }
+
+    @Override
+    public void pacificar() {
+        wrappee.pacificar();  
+    }
+	
+	
 }

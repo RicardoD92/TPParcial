@@ -6,7 +6,11 @@ public class CriaturaDomesticada extends Criatura {
         super(nombre, energia, afinidad, false);
     }
 
-    @Override
+
+
+
+
+	@Override
     public void entrenar() {
         sumarEnergia(10);
     }
